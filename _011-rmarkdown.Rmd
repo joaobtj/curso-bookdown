@@ -1,0 +1,76 @@
+# R Markdown [rmarkdown]
+
+Markdown é uma linguagem de marcação em texto puro (*plain text*), em que são utilizadas marcações (muito sutis) para títulos, links e formatações em geral. Seu resultado é legível mesmo sem processamento, diferente de outras linguagens, como HTML ou Latex que requerem muitas *tags* para formatar o texto. Atualmente, pode ser convertida em diversos formatos, como o próprio HTML e Latex, já citados, além dos formatos Epub, MS Word (.docx), entre outros. O objetivo do uso da linguagem Markdown é permitir o foco no texto e não na formatação.
+
+O desenvolvimento da linguagem RMarkdown foi uma extensão da original, com intuito de embutir fragmentos de código em R dentro de documentos Markdown. 
+
+Uma (muito) breve apresentação da sua sintaxe é apresentada na sequência.
+
+## Seções
+
+Os cabeçalhos das seções são escritos após o símbolo `# `. A quantidade de `# ` define o nível do cabeçalho:
+
+````markdown
+# Cabeçalho de primeiro nível
+
+## Cabeçalho de segundo nível
+
+### Cabeçalho de terceiro nível
+```` 
+
+Atenção para o espaço entre o `# ` e o início do texto.
+
+Para o cabeçalho nao ser numerado, adicione `{-}` após o texto:
+
+````markdown
+# Prefácio {-}
+````
+
+
+## Formatação
+
+A separação entre os parágrafos deve ser feita com dois espaços verticais (enter).
+
+Para deixar um texto em *itálico*, este deve ser escrito entre  `*` (asterisco): ``*itálico*`` = *itálico*. Já para deixar o texto em **negrito**: , este deve ser escrito entre  ``**`` (dois asteriscos): ``**negrito**`` = **negrito**. E para ***itálico e negrito***? adivinhem, `***` (três asteriscos): ``***itálico e negrito***`` = ***itálico e negrito***.
+
+Sobrescrito deve ficar entre `^` (circunflexo): ``m^3^/s`` = m^3^/s. Já o subscrito é escrito entre `~` (til): `H~2~O` =  H~2~O.
+
+Um link para uma página externa: `[Site da UFSC](https://ufsc.br)` = [Site da UFSC](https://ufsc.br)
+
+Uma citação é éscrita após o símbolo `>`, por exemplo:
+
+````markdown
+> "Esta é uma citação!"
+````
+
+> "Esta é uma citação!"
+
+Uma lista marcada deve ter cada item precedido por um `*` (asterisco):
+
+`* item 1`
+
+`* item 2`
+
+Retorna:
+
+* item 1
+* item 2
+
+````markdown
+Um trecho de código em R inline: entre  (crases) `r '\x60r x^2\x60'`  
+````
+
+Um código em R mais extenso (três crases para abrir e três crases para fechar):
+
+````markdown
+`r ''````{r}
+x = rnorm(100)
+```
+````
+
+Mais opções podem ser encontrados na folha de dicas do RStudio: [R Markdown Cheat Sheet](https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
+
+Muito mais informações podem ser encontradas neste livro bastante completo: [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+
+
+

@@ -1,0 +1,85 @@
+# O arquivo `_output.yml` {#output}
+
+Este é um exemplo do conteúdo do arquivo `_output.yml`
+
+```yaml
+bookdown::gitbook: #https://bookdown.org/yihui/bookdown/html.html#gitbook-style
+  css: style.css #arquivo .css
+  split_by: chapter #rmd, none, chapter, section, chapter+number, section+number
+  split_bib: yes #yes: adiciona as referências em cada página
+  includes:
+    in_header: ga.html #incluir códigos no HEAD do html, por exemplo, google analytics
+  config:
+    toc:
+      collapse: none #subsection, section, none
+      scroll_highlight: yes
+      before: |
+        <li><a href="./">Exemplo mínimo de um e-book</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Publicado com bookdown</a></li>
+    toolbar:
+      position: fixed #fixed, static
+    search: yes
+    fontsettings:
+      theme: white #white, night, sepia
+      family: serif #sans, serif
+      size: 2 #1 a 4
+    download: null
+    sharing:
+      whatsapp: yes
+      facebook: yes
+      twitter: yes
+      linkedin: no
+      weibo: no
+      instapaper: no
+      vk: no
+      all: ['whatsapp', 'facebook', 'twitter', 'linkedin']
+    info: yes
+
+```
+Para a saída GitBook (`bookdown::gitbook`), algumas das configurações são as seguintes:
+
+* `css`: para fornecer um ou mais arquivos CSS personalizados. 
+* `split_by`: especifica como dividir os arquivos HTML em múltiplas páginas. As opções são:
+  * `rmd`: cada arquivo Rmd cria um arquivo HTML.
+  * `none`: não separa o arquivo, ou seja, o livro todo está contido em um único HTML.
+  * `chapter`: separa para cada cabeçalho de primeiro nível.
+  * `section`: separa para cada cabeçalho de segundo nível.
+  * `chapter+number` and `section+number`: similar a `chapter` e `section`, ma os arquivos são numerados.
+* `split_bib`: se `split_bib = yes` adiciona as referências ao final de cada página. Caso `split_bib = no`, as referências são colocadas apenas em uma página separada.
+* `includes`: possibilita incluir um código HTML no arquivo de saída. Uma opção comum é incluir o código do Google Analytics (veja mais em [Google Analytics no Bookdown](http://tolentino.pro.br/post/google-analytics/))
+
+As opções indentadas dentro de `config` são:  
+
+* `toc`: controla o sumário (table of contents), que aparece no lado direiro da tela.
+  * `collapse`: os valores possíveis são: `subsection`, que desdobra o sumário até o terceiro nível, `section` que desdobra o sumário até o segundo nível e `none`, que desdobra até o primeiro nível.
+  * `scroll_highlight`: se `yes`, destaca o item atual do sumário enquanto você rola a página.
+  * `before` and `after`: adiciona itens antes e/ou depois do sumário.
+* `toolbar`: controla o comportamento da barra superior.
+  * `position`: os valores podem ser `fixed`, que fixa a barra superior e ela estará sempre visível mesmo quando a página é rolada, ou  `static`, que não rola a barra junto com a página, ou seja, ela não estará mais visível conforme a página é rolada.
+* `search`: se `yes`, adicoina um botão de busca na barra superior.
+* `fontsettings`: ajusta os valores iniciais para o tema e fonte. Para desativar, ajuste o valor para `null`.
+  * `theme`: os valores são `white` para um tema claro, `night` para um tema escuro e `sepia` para um tema com efeito envelhecido.
+  * `family`:  `serif` para uma fonte serifada [(O que é uma fonte serifada?)](https://pt.wikipedia.org/wiki/Serifa) ou `sans` para uma fonte não serifada.
+  * `size`: tamnho da fonte, entre 1 e 4
+* `download`: permite o download do e-bbok em outros formatos, como PDF ou EPUB. Os valores devem ser colcoados em um vetor, pir exemplo, `["pdf", "epub"]`. Caso download seja definido como `null`, o programa irá procurar pelos arquivos no diretório de saída e adicionar automaticamente. Para desabilitar o download, definir como `no`.
+* `sharing`: Adiciona botões para compartilhamento em redes sociais. Para desativar, definir como `no`. 
+  * `whatsapp`: se definido como `yes`, um botão para compartilhar a página no whatsapp irá aparecer na barra superior. Outras opções de redes sociais são: 
+  * `all`: opções que irão aparacer no menu *dropdown* de compartilhamento.
+* `info`: botão de informação que lista os atalhos do teclado. Para desativar, definir como `no`.
+
+
+<!-- Para a saída em PDF (`bookdown::pdf_book:`), as principais configurações são as seguintes: -->
+
+<!-- * `includes`: -->
+<!-- * `latex_engine`: -->
+<!-- * `citation_package`: -->
+<!-- * `keep_tex`: -->
+
+
+<!-- Para a saída em EPUB (`bookdown::epub_book`), não há configurações importantes a serem alteradas. POde-se, então, utilizar deixar na configuração padrão (`default`). -->
+
+
+
+
+
