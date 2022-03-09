@@ -17,7 +17,7 @@ bookdown::gitbook: #https://bookdown.org/yihui/bookdown/html.html#gitbook-style
     search: yes
     fontsettings:
       theme: white #white, night, sepia
-      family: serif #sans, serif
+      family: sans #sans, serif
       size: 2 #1 a 4
     download: null
     sharing:
@@ -28,5 +28,7 @@ bookdown::gitbook: #https://bookdown.org/yihui/bookdown/html.html#gitbook-style
       weibo: no
       instapaper: no
       vk: no
-      all: ['whatsapp', 'facebook', 'twitter', 'linkedin']
+      github: yes
+      all: ['linkedin', 'weibo']
     info: yes
+    

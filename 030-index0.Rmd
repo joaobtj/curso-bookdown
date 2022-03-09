@@ -13,6 +13,7 @@ cover-image: image/cover.jpg
 apple-touch-icon: image/cover.jpg
 favicon: image/favicon.ico
 url: 'https\://curso-bookdown.tolentino.pro.br'
+github-repo: joaobtj/curso-bookdown
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
@@ -23,12 +24,13 @@ link-citations: yes
 
 * `title`: título do e-book.
 * `author`: nome do(s) autor(es) do e-book
-* `date`: data de publicação. Para buscar automaticamente data em qe=ue foi feita a última modificação, use a função `Sys.Date()`
+* `date`: data de publicação. Para buscar automaticamente data em que foi feita a última modificação, use a função `Sys.Date()`.
 * `description`: um descrição sucinta utilizada pelos buscadores (SEO)
 * `cover-image`: uma imagem de capa para o e-book que irá aparecer quando compartilhar o link nas redes sociais.
 * `apple-touch-icon`: para IOS, o ícone quando o website é adiconada na tela inicial
 * `favicon`: ícone mostrado na barra de endereços ou nas abas  do navegador.
 * `url`: a *url* do website do e-book. Atenção para a barra esquerda que deve ser adicionada antes de dois pontos do endereço.
+* github-repo: repositório do github no formato `"usuario/repositorio"`
 * `site`: para renderizar o e-book no RStudio, definir a opção como `bookdown::bookdown_site`.
 * `documentclass`: definir como `book`.
 * `bibliography`: arquivos que contém a bibliografia, no formato *.bib

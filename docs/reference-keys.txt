@@ -1,0 +1,8 @@
+fig:ident-bookdown
+o-pacote-bookdown
+preparativos-iniciais
+escrevendo-um-e-book
+bkd
+output
+index0
+latex

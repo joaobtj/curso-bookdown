@@ -1,8 +1,9 @@
 book_filename: "e-book"
+output_dir: docs #public para GitLab; docs para GitHub
+new_session: "yes"
 delete_merged_file: true
-edit: https://gitlab.com/joaobtj/curso-bookdown/edit/main/%s
-view: https://gitlab.com/joaobtj/curso-bookdown/blob/main/%s
-output_dir: public #public para gitlab; docs para github
+edit: https://github.com/joaobtj/curso-bookdown/edit/main/%s
+view: https://github.com/joaobtj/curso-bookdown/blob/main/%s
 language:
   label:
     fig: 'Figura '

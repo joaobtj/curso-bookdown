@@ -22,7 +22,7 @@ bookdown::gitbook: #https://bookdown.org/yihui/bookdown/html.html#gitbook-style
     search: yes
     fontsettings:
       theme: white #white, night, sepia
-      family: serif #sans, serif
+      family: sans #sans, serif
       size: 2 #1 a 4
     download: null
     sharing:
@@ -33,7 +33,7 @@ bookdown::gitbook: #https://bookdown.org/yihui/bookdown/html.html#gitbook-style
       weibo: no
       instapaper: no
       vk: no
-      all: ['whatsapp', 'facebook', 'twitter', 'linkedin']
+      all: ['linkedin', 'weibo']
     info: yes
 
 ```
@@ -62,10 +62,10 @@ As opções indentadas dentro de `config` são:
   * `theme`: os valores são `white` para um tema claro, `night` para um tema escuro e `sepia` para um tema com efeito envelhecido.
   * `family`:  `serif` para uma fonte serifada [(O que é uma fonte serifada?)](https://pt.wikipedia.org/wiki/Serifa) ou `sans` para uma fonte não serifada.
   * `size`: tamnho da fonte, entre 1 e 4
-* `download`: permite o download do e-bbok em outros formatos, como PDF ou EPUB. Os valores devem ser colcoados em um vetor, pir exemplo, `["pdf", "epub"]`. Caso download seja definido como `null`, o programa irá procurar pelos arquivos no diretório de saída e adicionar automaticamente. Para desabilitar o download, definir como `no`.
+* `download`: permite o download do e-book em outros formatos, como PDF ou EPUB. Os valores devem ser colcoados em um vetor, por exemplo, `["pdf", "epub"]`. Caso download seja definido como `null`, o programa irá procurar pelos arquivos no diretório de saída e adicionar automaticamente. Para desabilitar o download, definir como `no`.
 * `sharing`: Adiciona botões para compartilhamento em redes sociais. Para desativar, definir como `no`. 
-  * `whatsapp`: se definido como `yes`, um botão para compartilhar a página no whatsapp irá aparecer na barra superior. Outras opções de redes sociais são: 
-  * `all`: opções que irão aparacer no menu *dropdown* de compartilhamento.
+  * `whatsapp`: se definido como `yes`, um botão para compartilhar a página no whatsapp irá aparecer na barra superior. Outras opções de redes sociais são: facebook, twitter, linkedin, weibo, instapaper, vk e github. Para o link do GitHub funcionar adequadamente, é necessário definir o repositório no arquivo index.Rmd.
+  * `all`: ícones das redes sociais que irão aparacer no menu *dropdown* de compartilhamento. Para desabilitar, definir como `no`. 
 * `info`: botão de informação que lista os atalhos do teclado. Para desativar, definir como `no`.
 
 
